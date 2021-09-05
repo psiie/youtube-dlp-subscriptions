@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  ytdlp-subs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - './app/last.txt:/app/last.txt'
+      - './app/subs.xml:/app/subs.xml:ro'
+      - './downloads:/app/downloads'
