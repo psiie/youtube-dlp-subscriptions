@@ -1,27 +1,60 @@
-# youtube-dl-subscriptions
+# youtube-dlp-subscriptions
 
-Downloads all new videos from your YouTube subscription feeds.
+Downloads new videos from your YouTube subscription feeds since the last run.
 
 
 ## Requirements
 
 This script requires python3. Additional dependencies can be found in the `requirements.txt` file.
 
+## Usage (Docker-Compose)
+If you are familiar with what docker is, and what docker-compose is to docker, this is the recommended method to use.
 
-## Usage
+Create a `subs.xml` file inside `app/` and populate it with your channels to download from. See `subs.sample.xml` for an example. See "More on subs.xml" chapter below for more info.
+
+First time only: `docker build`
+Every subsequnt time: `docker run`
+
+A cron job can be set up to run the process at specified intervals. Be sure to `cd` into the directory first before running `docker run` from cron.
+
+sample:
+every day at 2AM, log stdout/stderr to log as well
+`0 2 * * * cd /home/darkenvy/git/youtube-dlp-subscriptions && docker-compose up 2>&1 | tee log.txt`
+
+## Usage (Manual)
 
 Clone the repository
 
-    git clone https://github.com/mewfree/youtube-dl-subscriptions
+    `git clone https://github.com/darkenvy/youtube-dlp-subscriptions`
+    `cd youtube-dlp-subscriptions/app/`
 
 Install the requirements
 
     pip install -r requirements.txt
 
-Download your YouTube's subscriptions OPML file by visiting [this URL](https://www.youtube.com/subscription_manager?action_takeout=1). Save the file as `subs.xml` into the cloned repository folder.
+You will need to generate a xml file and name it `subs.xml`. See subs.sample.xml for an example. In the past, this file was easily generated, but Google has removed the feature to generate a OMPL file as a means to stop driving traffic away from youtube (and onto newsreaders and the like).
 
 You can then run the script
 
     python3 dl.py
 
 A `last.txt` file will be created in order to avoid downloading the same videos on the next run.
+
+## More on subs.xml
+
+Start with this initial template:
+```
+<opml version="1.1">
+  <body>
+    <outline text="YouTube Subscriptions" title="YouTube Subscriptions">
+      <outline title="ANYTHING" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=CHANNEL_ID" />
+    </outline>
+  </body>
+</opml>
+```
+
+The ONLY factor that must change is the string of `CHANNEL_ID`. the text ANYTHING is only for self-comments (and is useful for maintaining a long list ;) ).
+
+## Thanks
+
+A thanks to mewfree and https://github.com/mewfree/youtube-dl-subscriptions for the original script and pukkandan for dlp.
