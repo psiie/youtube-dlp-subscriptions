@@ -54,10 +54,10 @@ Start with this initial template:
 </opml>
 ```
 
+The ONLY factor that must change is the string of `CHANNEL_ID`. the text ANYTHING is only for self-comments (and is useful for maintaining a long list ;) ).
+
 ## SyncThink
 Syncthing can be set up to sync from the downloads folder onto any other device (such as an android). Quiet useful for long trips without cellular internet (or a data plan).
-
-The ONLY factor that must change is the string of `CHANNEL_ID`. the text ANYTHING is only for self-comments (and is useful for maintaining a long list ;) ).
 
 ## Thanks
 
