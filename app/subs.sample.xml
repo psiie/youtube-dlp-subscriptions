@@ -3,6 +3,8 @@
     <outline text="YouTube Subscriptions" title="YouTube Subscriptions">
       <outline text="TED-Ed" title="TED-Ed" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCsooa4yRKGN_zEE8iknghZA" />
       <outline text="MattKC" title="MattKC" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UChrYe70o7NmDioL02PRVWVg" />
+      <outline text="Tom Scott" title="Tom Scott" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCBa659QWEk1AI4Tg--mrJ2A" />
+      <outline text="SciShow" title="SciShow" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCZYTClx2T1of7BRZ86-8fow" />
     </outline>
   </body>
 </opml>
