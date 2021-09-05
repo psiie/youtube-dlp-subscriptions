@@ -13,6 +13,7 @@ If you are familiar with what docker is, and what docker-compose is to docker, t
 Create a `subs.xml` file inside `app/` and populate it with your channels to download from. See `subs.sample.xml` for an example. See "More on subs.xml" chapter below for more info.
 
 First time only: `docker build`
+
 Every subsequnt time: `docker run`
 
 A cron job can be set up to run the process at specified intervals. Be sure to `cd` into the directory first before running `docker run` from cron.
@@ -52,6 +53,9 @@ Start with this initial template:
   </body>
 </opml>
 ```
+
+## SyncThink
+Syncthing can be set up to sync from the downloads folder onto any other device (such as an android). Quiet useful for long trips without cellular internet (or a data plan).
 
 The ONLY factor that must change is the string of `CHANNEL_ID`. the text ANYTHING is only for self-comments (and is useful for maintaining a long list ;) ).
 
