@@ -59,6 +59,10 @@ The ONLY factor that must change is the string of `CHANNEL_ID`. the text ANYTHIN
 ## SyncThink
 Syncthing can be set up to sync from the downloads folder onto any other device (such as an android). Quiet useful for long trips without cellular internet (or a data plan).
 
+## TODO:
+Get rid of the XML entirely now that it is no longer a point-of-convenience.
+Favor a item list of channel_ids. Perhaps utilize yt-dlp's `-a` flag, which can take a list and download them. `--playlist-end 15` and `--dateafter` are also useful flags.
+
 ## Thanks
 
 A thanks to mewfree and https://github.com/mewfree/youtube-dl-subscriptions for the original script and pukkandan for dlp.
