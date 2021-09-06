@@ -24,7 +24,7 @@ LAST=$(cat $LAST_FILE_PATH)
 
 yt-dlp \
   --dateafter $LAST \
-  --playlist-end 10 \
+  --playlist-end 5 \
   --break-on-existing \
   -a $SUBS_FILE_PATH
 
