@@ -11,12 +11,13 @@ SUBS_FILE_PATH=$(pwd)/alternative-method-subs.txt
 
 if [ ! -f "$SUBS_FILE_PATH" ]; then
   echo 'https://www.youtube.com/c/MattKC' > $SUBS_FILE_PATH
-  echo 'Created sample subscription file'
+  echo 'Created sample subscription file. Populate the file and run again.'
+  exit 0
 fi
 
 if [ ! -f "$LAST_FILE_PATH" ]; then
   echo $NOW > $LAST_FILE_PATH
-  echo 'Created Last file. Now exiting'
+  echo 'Created "Last" file. Now exiting.'
   exit 0
 fi
 
