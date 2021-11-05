@@ -33,7 +33,7 @@ Install the requirements
 
     pip install -r requirements.txt
 
-You will need to generate a xml file and name it `subs.xml`. See subs.sample.xml for an example. In the past, this file was easily generated, but Google has removed the feature to generate a OMPL file as a means to stop driving traffic away from youtube (and onto newsreaders and the like).
+You will need to generate an xml file and name it `subs.xml`. See subs.sample.xml for an example. In the past, this file was easily generated, but Google has removed the feature to generate a OMPL file as a means to stop driving traffic away from youtube (and onto newsreaders and the like).
 
 You can then run the script
 
@@ -54,10 +54,10 @@ Start with this initial template:
 </opml>
 ```
 
-The ONLY factor that must change is the string of `CHANNEL_ID`. the text ANYTHING is only for self-comments (and is useful for maintaining a long list ;) ).
+The ONLY factor that you must change is the string of `CHANNEL_ID`. the text ANYTHING is only for self-comments (and is useful for maintaining a long list ;) ).
 
-## SyncThink
-Syncthing can be set up to sync from the downloads folder onto any other device (such as an android). Quiet useful for long trips without cellular internet (or a data plan).
+## SyncThing
+Syncthing can be set up to sync from the downloads folder onto any other device (such as an android). Quite useful for long trips without cellular internet (or a data plan).
 
 ## TODO:
 Get rid of the XML entirely now that it is no longer a point-of-convenience.
